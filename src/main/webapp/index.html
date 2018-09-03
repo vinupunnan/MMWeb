@@ -1,10 +1,14 @@
-<html ng-app="">
+<html ng-app>
     <head>
-      <script  src="/script/angular.js"></script>
+      <script  src="angular.js"></script>
     </head>   
-    <body  ng-init="time=10" n> 
+    <body ng-init="timeofDay = 14"> 
         <h1>Hello Vinu</h1>
-        <p ng-if="time<12">IT is morning</p>
-        <p ng-if="time>12">IT is noon</p>
+        
+        <p ng-if ="timeofDay < 12">Good Morning</p>
+        <p ng-if ="timeofDay > 12">Good AfterNoon</p>
+        <p> The Hour of day is </p>
+        <p> {{timeofDay}}</p>
+        <input type="text" ng-value="timeofDay" ></input>
     </body>   
  </html>   
